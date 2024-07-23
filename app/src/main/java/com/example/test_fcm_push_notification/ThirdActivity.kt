@@ -31,7 +31,7 @@ class ThirdActivity : ComponentActivity() {
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
+                    color = MaterialTheme.colorScheme.secondary
                 ) {
                     Greeting(
                         "This is Third Screen \nNotification Title: $title\nNotification Body: $body\nData Key 1: $key1\n" +

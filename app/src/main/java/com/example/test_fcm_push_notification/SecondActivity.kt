@@ -31,7 +31,7 @@ class SecondActivity : ComponentActivity() {
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
+                    color = MaterialTheme.colorScheme.primary
                 ) {
                     Greeting("This is Second Screen \nNotification Title: $title\nNotification Body: $body\nData Key 1: $key1\n" +
                             "Data Key 2: $key2")
