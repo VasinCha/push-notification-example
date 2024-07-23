@@ -70,6 +70,8 @@ class MainActivity : ComponentActivity() {
         //      }
         // }
 
+        printIntentData(intent!!)
+
         Log.i(TAG, "@@@@ handleIntent This called when click from Notification Bar")
         intent?.extras?.let {
             val notificationTitle = it.getString("title")
@@ -121,6 +123,18 @@ class MainActivity : ComponentActivity() {
                     })
                 }
             }
+        }
+    }
+
+    private fun printIntentData(intent: Intent) {
+        val extras = intent.extras
+        if (extras != null) {
+            for (key in extras.keySet()) {
+                val value = extras.get(key)
+                Log.d("IntentData", "@@@@ Key: $key Value: $value")
+            }
+        } else {
+            Log.d("IntentData", "@@@@ No extras in the intent")
         }
     }
 
@@ -184,3 +198,4 @@ fun GreetingPreview() {
         Greeting("Android")
     }
 }
+
